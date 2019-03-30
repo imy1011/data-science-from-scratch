@@ -1,0 +1,5 @@
+
+a. If the file hasn't existed yet, a new file will be created with these content.
+b. If the file exists, it will be overwritten with these lines.
+Notes: new file created and overwritten the exisiting one at the beginning.
+It means that all these lines, and not only this final line, appear in the final file.

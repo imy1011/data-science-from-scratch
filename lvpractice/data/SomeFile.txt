@@ -1,0 +1,38 @@
+Now, sys.stdin is just another file object, which happens to be opened by Python before your program starts. What you do with that file object is up to you, but it is not really any different to any other file object, its just that you don't need an open.
+
+for something in sys.stdin:
+    some stuff here
+will iterate through standard input until end-of-file is reached. And so will this:
+
+lines = sys.stdin.readlines()
+Your first question is really about different ways of using a file object.
+
+Second, where is it reading from? It is reading from file descriptor 0 (zero). On Windows it is file handle 0 (zero). File descriptor/handle 0 is connected to the console or tty by default, so in effect it is reading from the keyboard. However it can be redirected, often by a shell (like bash or cmd.exe) using syntax like this:
+
+myprog.py < input_file.txt 
+That alters file descriptor zero to read a file instead of the keyboard. 
+
+On UNIX or Linux this uses the underlying call dup2(). 
+
+
+Read your shell documentation for more information about redirection (or maybe man dup2 if you are brave).
+
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
+Loan added this line into an exisiting file by opening the file in appending mode!
